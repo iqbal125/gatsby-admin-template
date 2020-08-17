@@ -93,24 +93,6 @@
   .mobile_logo {
     display: none;
   }
-
-  .login_button_desktop {
-    border: none;
-    padding: 0.6em 1.3em 0.6em 1.3em;
-    margin: 0.5em;
-    margin-right: 2em;
-    text-decoration: none;
-    background-color: orangered;
-    color: white;
-    font-weight: 900;
-  }
-  .login_button_mobile {
-    display: none;
-  }
-
-  .header_photo_wrap_mobile {
-    display: none;
-  }
 }
 
 /* Mobile Header */
@@ -228,25 +210,6 @@
     border-bottom: 1px solid black;
   }
 
-  /* Profile and Login Button */
-
-  .profile_section {
-    display: flex;
-    align-items: center;
-  }
-
-  .login_button_mobile {
-    border: none;
-    padding: 0.6em 1.3em 0.6em 1.3em;
-    margin: 0.5em;
-    margin-left: 1.3em;
-    margin-right: 2em;
-    text-decoration: none;
-    background-color: orangered;
-    color: white;
-    font-weight: 900;
-  }
-
   /* Desktop Only Elements */
 
   .desktop_logo {
@@ -256,14 +219,17 @@
   .desktop_links {
     display: none;
   }
+}
 
-  .login_button_desktop {
-    display: none;
-  }
-
-  .header_photo_wrap_desk {
-    display: none;
-  }
+.login_button {
+  border: none;
+  padding: 0.6em 1.3em 0.6em 1.3em;
+  margin: 0.5em;
+  margin-right: 2em;
+  text-decoration: none;
+  background-color: orangered;
+  color: white;
+  font-weight: 900;
 }
 
 /* header photo */

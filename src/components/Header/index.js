@@ -3,30 +3,25 @@ import styles from './header.module.css';
 
 import { Link } from 'gatsby';
 import AuthContext from '../../utils/auth_context';
-import GeneralContext from '../../utils/general_context';
+
 import logo from '../../../static/logos/favicon.ico';
 
-import { FcSearch } from 'react-icons/fc';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { MdAccountCircle } from 'react-icons/md';
 
 const Header = ({ props }) => {
   const [navLinks, toggleNavLinks] = useState(false);
-  const [search, setSearch] = useState(false);
+  const [accountLinks, toggleAccountLinks] = useState(false);
+
   const context = useContext(AuthContext);
-  const contextGeneral = useContext(GeneralContext);
   const { uri } = props;
 
   const isHome = uri === '/';
 
   const navLinksHandler = () => (navLinks ? toggleNavLinks(false) : toggleNavLinks(true));
-  const searchHandler = () => (search ? setSearch(false) : setSearch(true));
-  const menuHandler = () => {
-    contextGeneral.sideState.isOpen
-      ? contextGeneral.closeSideDrawer()
-      : contextGeneral.openSideDrawer();
-  };
+
+  const menuHandler = () => (accountLinks ? toggleAccountLinks(false) : toggleAccountLinks(true));
 
   return (
     <>
@@ -75,13 +70,6 @@ const Header = ({ props }) => {
                     >
                       Services
                     </Link>
-                    <Link
-                      to="/blog"
-                      className={styles.header_links_mobile}
-                      activeClassName={styles.header_link_active}
-                    >
-                      Blog
-                    </Link>
                   </div>
                 </>
               )}
@@ -112,13 +100,6 @@ const Header = ({ props }) => {
               >
                 Services
               </Link>
-              <Link
-                to="/blog"
-                className={styles.header_link}
-                activeClassName={styles.header_link_active}
-              >
-                Blog
-              </Link>
             </div>
             {/* Mobile */}
             <div className={styles.mobile_logo}>
@@ -129,9 +110,9 @@ const Header = ({ props }) => {
           </div>
 
           <div className={styles.right_header}>
-            {/* Desktop */}
+            {/* Desktop and Mobile */}
             {!context.authState.isAuthenticated && (
-              <Link to="/app/login" className={styles.login_button_desktop}>
+              <Link to="/app/login" className={styles.login_button}>
                 Login
               </Link>
             )}
@@ -149,33 +130,6 @@ const Header = ({ props }) => {
                 )}
               </div>
             )}
-            {/* Mobile */}
-            <div className={styles.profile_section}>
-              {!context.authState.isAuthenticated && (
-                <Link
-                  to="/app/login"
-                  className={styles.login_button_mobile}
-                  activeClassName={styles.login_button_active}
-                >
-                  Login
-                </Link>
-              )}
-
-              {context.authState.isAuthenticated && (
-                <div className={styles.header_photo_wrap_mobile}>
-                  {context.authState.user.photo ? (
-                    <img
-                      src={context.authState.user.photo}
-                      onClick={menuHandler}
-                      className={styles.header_photo}
-                      alt="Not Found"
-                    />
-                  ) : (
-                    <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
-                  )}
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </header>

@@ -37,13 +37,13 @@ const SideBar = props => {
 
   return (
     <div ref={ref} className={styles.side_drawer}>
-      <div className={styles.header_photo_wrap_desk}>
+      {/*<div className={styles.header_photo_wrap_desk}>
         {context.authState.user.photo ? (
           <img src={context.authState.user.photo} className={styles.header_photo} alt="Not Found" />
         ) : (
           <MdAccountCircle className={styles.header_photo} />
         )}
-      </div>
+      </div>*/}
       <div className={styles.side_items} onClick={goToProfile}>
         Profile
       </div>

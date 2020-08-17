@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import { navigate } from 'gatsby';
 import Profile from '../Profile';
+import SideBar from '../SideBar';
 
 import Auth from '../Authentication/auth';
 
@@ -22,10 +23,14 @@ const Routes = () => {
   };
 
   return (
-    <Router>
-      <PrivateRoute path="/app/profile" component={Profile} />
-      <Auth path="/app/login" />
-    </Router>
+    <>
+      <SideBar />
+      <Router>
+        {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
+        <Profile path="/app/profile" />
+        <Auth path="/app/login" />
+      </Router>
+    </>
   );
 };
 
