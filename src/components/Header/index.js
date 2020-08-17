@@ -117,7 +117,7 @@ const Header = ({ props }) => {
               </Link>
             )}
             {context.authState.isAuthenticated && (
-              <div className={styles.header_photo_wrap_desk}>
+              <div className={styles.header_photo_wrap}>
                 {context.authState.user.photo ? (
                   <img
                     src={context.authState.user.photo}
