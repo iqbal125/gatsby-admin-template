@@ -1,0 +1,11 @@
+.layout {
+}
+
+.layout_fade {
+  opacity: 0.4;
+}
+
+main {
+  min-height: 80vh;
+  box-sizing: border-box;
+}

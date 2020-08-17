@@ -1,0 +1,276 @@
+/* Desktop Header */
+
+@media only screen and (min-width: 768px) {
+  .header_home {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0.5em;
+    background-color: var(--primary-color);
+  }
+
+  .header_not_home {
+    border-bottom: lightgrey 0.5px dotted;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  .right_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .mid_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+
+  /* header links */
+
+  .header_link {
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 1.2em;
+  }
+
+  .header_link {
+    position: relative;
+  }
+
+  .header_link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header_link:hover::before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .header_link_active {
+    position: relative;
+  }
+
+  .header_link_active::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: visible;
+    width: 100%;
+  }
+
+  /* Set Mobile Elements to None */
+  .menu_icon {
+    display: none;
+  }
+
+  .mobile_logo {
+    display: none;
+  }
+
+  .login_button_desktop {
+    border: none;
+    padding: 0.6em 1.3em 0.6em 1.3em;
+    margin: 0.5em;
+    margin-right: 2em;
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+    font-weight: 900;
+  }
+  .login_button_mobile {
+    display: none;
+  }
+
+  .header_photo_wrap_mobile {
+    display: none;
+  }
+}
+
+/* Mobile Header */
+
+@media only screen and (max-width: 769px) {
+  .top_header_not_home {
+    border-bottom: lightgrey 0.5px dotted;
+    margin-bottom: 3rem;
+  }
+
+  .header_home {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    padding: 0.5em;
+    background-color: var(--primary-color);
+  }
+
+  .header_not_home {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    padding: 0.5em;
+  }
+
+  .right_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .left_header {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+  }
+
+  .mid_header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hamburger Menu */
+
+  .menu_icon {
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger {
+    font-size: 2em;
+    padding: 0.2em;
+    margin-top: 0.2em;
+    cursor: pointer;
+  }
+
+  .close_button {
+    font-size: 2em;
+    cursor: pointer;
+    margin-top: 0.2em;
+    padding: 0.2em;
+  }
+
+  @keyframes appearIn {
+    from {
+      transform: scale(0, 0);
+    }
+    to {
+      transform: scale(1, 1);
+    }
+  }
+
+  /* Drop Down */
+  .dropdown_home {
+    position: absolute;
+    top: 3rem;
+    left: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    z-index: 1;
+  }
+
+  .dropdown_not_home {
+    position: absolute;
+    top: 3rem;
+    left: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    z-index: 1;
+  }
+
+  .header_link_active {
+    border-bottom: 1px solid red;
+    background-color: honeydew;
+  }
+
+  .header_links_mobile {
+    padding: 2.3rem;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+  }
+
+  /* Profile and Login Button */
+
+  .profile_section {
+    display: flex;
+    align-items: center;
+  }
+
+  .login_button_mobile {
+    border: none;
+    padding: 0.6em 1.3em 0.6em 1.3em;
+    margin: 0.5em;
+    margin-left: 1.3em;
+    margin-right: 2em;
+    text-decoration: none;
+    background-color: orangered;
+    color: white;
+    font-weight: 900;
+  }
+
+  /* Desktop Only Elements */
+
+  .desktop_logo {
+    display: none;
+  }
+
+  .desktop_links {
+    display: none;
+  }
+
+  .login_button_desktop {
+    display: none;
+  }
+
+  .header_photo_wrap_desk {
+    display: none;
+  }
+}
+
+/* header photo */
+.header_photo {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}

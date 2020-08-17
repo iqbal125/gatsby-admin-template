@@ -1,0 +1,24 @@
+.card_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+  padding: 1rem;
+  margin: 3rem;
+}
+
+.about_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.top_div {
+  margin-bottom: 1rem;
+}
+
+.card {
+  padding: 1rem;
+}
