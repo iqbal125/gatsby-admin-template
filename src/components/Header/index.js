@@ -128,6 +128,13 @@ const Header = ({ props }) => {
                 ) : (
                   <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
                 )}
+                {accountLinks && (
+                  <div className={styles.account_dropdown}>
+                    <div>Item 1 </div>
+                    <div>Item 2</div>
+                    <div>Item 3</div>
+                  </div>
+                )}
               </div>
             )}
           </div>

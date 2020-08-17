@@ -240,3 +240,15 @@
   height: 40px;
   vertical-align: middle;
 }
+
+.header_photo_wrap {
+  display: inline-block;
+  position: relative;
+}
+
+.account_dropdown {
+  position: absolute;
+  top: 2em;
+  left: -2em;
+  background-color: aqua;
+}
