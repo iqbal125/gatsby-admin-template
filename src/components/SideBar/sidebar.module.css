@@ -8,16 +8,8 @@
   padding-top: 2em;
   font-size: 1.2em;
   font-weight: 700;
-  height: 100%;
-  width: 20%;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
   background-color: black;
   color: white;
-  overflow-x: hidden;
-  animation: grow 0.7s;
 }
 
 .side_items {

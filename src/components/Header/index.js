@@ -112,7 +112,7 @@ const Header = ({ props }) => {
           <div className={styles.right_header}>
             {/* Desktop and Mobile */}
             {!context.authState.isAuthenticated && (
-              <Link to="/app/login" className={styles.login_button}>
+              <Link to="/login" className={styles.login_button}>
                 Login
               </Link>
             )}

@@ -4,7 +4,7 @@ import { navigate } from 'gatsby';
 import Profile from '../Profile';
 import SideBar from '../SideBar';
 
-import Auth from '../Authentication/auth';
+import styles from './routes.module.css';
 
 const Routes = () => {
   //check token expires time on private routes
@@ -23,14 +23,13 @@ const Routes = () => {
   };
 
   return (
-    <>
-      {/*<SideBar />*/}
+    <div className={styles.main}>
+      <SideBar />
       <Router>
         {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
         <Profile path="/app/profile" />
-        <Auth path="/app/login" />
       </Router>
-    </>
+    </div>
   );
 };
 
