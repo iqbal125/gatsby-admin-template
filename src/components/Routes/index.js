@@ -24,7 +24,7 @@ const Routes = () => {
 
   return (
     <>
-      <SideBar />
+      {/*<SideBar />*/}
       <Router>
         {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
         <Profile path="/app/profile" />
