@@ -15,7 +15,7 @@ const Routes = () => {
 
   const PrivateRoute = ({ component: Component, location, ...rest }) => {
     if (!isTokenValid()) {
-      navigate('/app/login');
+      navigate('/login');
       return null;
     } else {
       return <Component {...rest} />;
@@ -24,11 +24,16 @@ const Routes = () => {
 
   return (
     <div className={styles.main}>
-      <SideBar />
-      <Router>
-        {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
-        <Profile path="/app/profile" />
-      </Router>
+      <div className={styles.side_bar}>
+        <SideBar />
+      </div>
+
+      <div className={styles.content}>
+        <Router>
+          {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
+          <Profile path="/app/profile" />
+        </Router>
+      </div>
     </div>
   );
 };

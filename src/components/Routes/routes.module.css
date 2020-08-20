@@ -1,4 +1,13 @@
 .main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 18% auto;
   min-height: 100vh;
+}
+
+.side_bar {
+}
+
+.content {
+  display: flex;
+  justify-content: center;
 }
