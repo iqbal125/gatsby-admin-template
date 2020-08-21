@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Router } from '@reach/router';
 import { navigate } from 'gatsby';
 import Profile from '../Profile';
 import SideBar from '../SideBar';
+import SideBarIcons from '../SideBarIcons';
 import AppHeader from '../AppHeader';
 import styles from './routes.module.css';
 
 const Routes = () => {
+  const [isSidebar, toggleSidebar] = useState(false);
+  const sidebarHandler = () => (isSidebar ? toggleSidebar(false) : toggleSidebar(true));
+
   //check token expires time on private routes
   const isTokenValid = () => {
     let expiresAt = JSON.parse(localStorage.getItem('expiresIn'));
@@ -23,13 +27,19 @@ const Routes = () => {
   };
 
   return (
-    <div className={styles.main}>
-      <div className={styles.side_bar}>
-        <SideBar />
-      </div>
+    <div className={isSidebar ? styles.main_with_sidebar : styles.main_no_sidebar}>
+      {isSidebar ? (
+        <div className={styles.side_bar}>
+          <SideBar />
+        </div>
+      ) : (
+        <div className={styles.side_bar_icons}>
+          <SideBarIcons />
+        </div>
+      )}
 
       <div className={styles.content}>
-        <AppHeader />
+        <AppHeader props={{ isSidebar, sidebarHandler }} />
         <Router>
           {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
           <Profile path="/app/profile" />

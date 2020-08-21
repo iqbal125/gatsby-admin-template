@@ -80,6 +80,11 @@
     width: 100%;
   }
 
+  .side_bar_menu {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
+
   /* Set Mobile Elements to None */
   .menu_icon {
     display: none;

@@ -10,9 +10,11 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { MdAccountCircle } from 'react-icons/md';
 
-const AppHeader = () => {
+const AppHeader = ({ props }) => {
   const [navLinks, toggleNavLinks] = useState(false);
   const [accountLinks, toggleAccountLinks] = useState(false);
+
+  const { isSidebar, sidebarHandler } = props;
 
   const context = useContext(AuthContext);
 
@@ -28,6 +30,17 @@ const AppHeader = () => {
         <div className={styles.header_home}>
           <div className={styles.left_header}>
             {/* Desktop */}
+            <div className={styles.side_bar_menu}>
+              {!isSidebar ? (
+                <div onClick={sidebarHandler} className={styles.hamburger}>
+                  <GiHamburgerMenu />
+                </div>
+              ) : (
+                <div onClick={sidebarHandler} className={styles.close_button}>
+                  <AiOutlineClose />
+                </div>
+              )}
+            </div>
 
             {/* Mobile */}
             <div className={styles.menu_icon}>
@@ -73,29 +86,7 @@ const AppHeader = () => {
 
           <div className={styles.mid_header}>
             {/* Desktop */}
-            <div className={styles.desktop_links}>
-              <Link
-                to="/about"
-                className={styles.header_link}
-                activeClassName={styles.header_link_active}
-              >
-                About
-              </Link>
-              <Link
-                to="/contact"
-                className={styles.header_link}
-                activeClassName={styles.header_link_active}
-              >
-                Contact
-              </Link>
-              <Link
-                to="/services"
-                className={styles.header_link}
-                activeClassName={styles.header_link_active}
-              >
-                Services
-              </Link>
-            </div>
+
             {/* Mobile */}
             <div className={styles.mobile_logo}>
               <Link to="/">
