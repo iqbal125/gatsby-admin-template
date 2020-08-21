@@ -26,11 +26,22 @@ const Routes = () => {
     }
   };
 
+  //<div className={isSidebar ? styles.main_with_sidebar : styles.main_no_sidebar}>
+  //  {isSidebar ? (
+  //    <div className={styles.side_bar}>
+  //      <SideBar props={{ isSidebar, sidebarHandler }} />
+  //    </div>
+  //  ) : (
+  //    <div className={styles.side_bar_icons}>
+  //      <SideBarIcons />
+  //    </div>
+  //  )}
+
   return (
     <div className={isSidebar ? styles.main_with_sidebar : styles.main_no_sidebar}>
       {isSidebar ? (
         <div className={styles.side_bar}>
-          <SideBar />
+          <SideBar props={{ isSidebar, sidebarHandler }} />
         </div>
       ) : (
         <div className={styles.side_bar_icons}>

@@ -12,14 +12,25 @@
 
 .side_bar {
   width: 12em;
+  animation: sidebarIn 3s ease-in;
 }
 
 .side_bar_icons {
   width: 4em;
+  animation: sidebarOut 3s ease-out;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@keyframes sidebarOut {
+  from {
+    transform: scaleX(12em);
+  }
+  to {
+    transform: scaleX(4em);
+  }
 }

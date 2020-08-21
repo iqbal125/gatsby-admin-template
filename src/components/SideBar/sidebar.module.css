@@ -1,14 +1,24 @@
 /* Side Nav */
 
-.side_drawer {
+.side_drawer_full {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 2rem;
   background-color: black;
   position: fixed;
-  width: inherit;
+  width: 12em;
   min-height: 100vh;
+  animation: grow 0.4s linear;
+}
+
+@keyframes sidebarIn {
+  from {
+    transform: scaleX(0%);
+  }
+  to {
+    transform: scaleX(100%);
+  }
 }
 
 .side_items {
@@ -29,12 +39,10 @@
 
 @keyframes grow {
   from {
-    transform: scaleX(0);
-    transform-origin: left center;
+    width: 4em;
   }
   to {
-    transform: scaleX(100%);
-    transform-origin: left center;
+    width: 12em;
   }
 }
 
