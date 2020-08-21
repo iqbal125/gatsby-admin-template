@@ -28,11 +28,7 @@ const AppHeader = () => {
         <div className={styles.header_home}>
           <div className={styles.left_header}>
             {/* Desktop */}
-            <div className={styles.desktop_logo}>
-              <Link to="/">
-                <img src={logo} alt="" />
-              </Link>
-            </div>
+
             {/* Mobile */}
             <div className={styles.menu_icon}>
               {!navLinks ? (
