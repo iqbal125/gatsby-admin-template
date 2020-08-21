@@ -16,6 +16,8 @@ const AppHeader = () => {
 
   const context = useContext(AuthContext);
 
+  const photo = context.authState.user ? context.authState.user.photo : null;
+
   const navLinksHandler = () => (navLinks ? toggleNavLinks(false) : toggleNavLinks(true));
 
   const menuHandler = () => (accountLinks ? toggleAccountLinks(false) : toggleAccountLinks(true));
@@ -107,33 +109,27 @@ const AppHeader = () => {
           </div>
 
           <div className={styles.right_header}>
-            {/* Desktop and Mobile */}
-            {!context.authState.isAuthenticated && (
-              <Link to="/login" className={styles.login_button}>
-                Login
-              </Link>
-            )}
-            {context.authState.isAuthenticated && (
-              <div className={styles.header_photo_wrap}>
-                {context.authState.user.photo ? (
-                  <img
-                    src={context.authState.user.photo}
-                    onClick={menuHandler}
-                    className={styles.header_photo}
-                    alt="Not Found"
-                  />
-                ) : (
-                  <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
-                )}
-                {accountLinks && (
-                  <div className={styles.account_dropdown}>
-                    <div>Item 1 </div>
-                    <div>Item 2</div>
-                    <div>Item 3</div>
-                  </div>
-                )}
-              </div>
-            )}
+            {/* Desktop and Mobile */}(
+            <div className={styles.header_photo_wrap}>
+              {photo ? (
+                <img
+                  src={context.authState.user.photo}
+                  onClick={menuHandler}
+                  className={styles.header_photo}
+                  alt="Not Found"
+                />
+              ) : (
+                <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
+              )}
+              {accountLinks && (
+                <div className={styles.account_dropdown}>
+                  <div>Item 1 </div>
+                  <div>Item 2</div>
+                  <div>Item 3</div>
+                </div>
+              )}
+            </div>
+            )
           </div>
         </div>
       </header>
