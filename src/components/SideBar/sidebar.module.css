@@ -12,15 +12,6 @@
   animation: grow 0.4s linear;
 }
 
-@keyframes sidebarIn {
-  from {
-    transform: scaleX(0%);
-  }
-  to {
-    transform: scaleX(100%);
-  }
-}
-
 .side_items {
   padding: 1em;
   cursor: pointer;
