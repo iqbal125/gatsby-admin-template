@@ -6,7 +6,8 @@
   align-items: flex-start;
   padding-top: 2em;
   background-color: black;
-
+  position: fixed;
+  width: inherit;
   min-height: 100vh;
 }
 

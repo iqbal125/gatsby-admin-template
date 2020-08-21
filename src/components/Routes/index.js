@@ -3,7 +3,7 @@ import { Router } from '@reach/router';
 import { navigate } from 'gatsby';
 import Profile from '../Profile';
 import SideBar from '../SideBar';
-
+import AppHeader from '../AppHeader';
 import styles from './routes.module.css';
 
 const Routes = () => {
@@ -29,6 +29,7 @@ const Routes = () => {
       </div>
 
       <div className={styles.content}>
+        <AppHeader />
         <Router>
           {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
           <Profile path="/app/profile" />

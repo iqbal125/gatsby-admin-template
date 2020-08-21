@@ -10,14 +10,11 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { MdAccountCircle } from 'react-icons/md';
 
-const Header = ({ props }) => {
+const AppHeader = () => {
   const [navLinks, toggleNavLinks] = useState(false);
   const [accountLinks, toggleAccountLinks] = useState(false);
 
   const context = useContext(AuthContext);
-  const { uri } = props;
-
-  const isHome = uri === '/';
 
   const navLinksHandler = () => (navLinks ? toggleNavLinks(false) : toggleNavLinks(true));
 
@@ -25,8 +22,8 @@ const Header = ({ props }) => {
 
   return (
     <>
-      <header className={isHome ? '' : styles.top_header_not_home}>
-        <div className={isHome ? styles.header_home : styles.header_not_home}>
+      <header className={styles.top_header_not_home}>
+        <div className={styles.header_home}>
           <div className={styles.left_header}>
             {/* Desktop */}
             <div className={styles.desktop_logo}>
@@ -48,7 +45,7 @@ const Header = ({ props }) => {
               {/* Mobile Hamburger Links*/}
               {navLinks && (
                 <>
-                  <div className={isHome ? styles.dropdown_home : styles.dropdown_not_home}>
+                  <div className={styles.dropdown_home}>
                     <Link
                       to="/about"
                       className={styles.header_links_mobile}
@@ -144,4 +141,4 @@ const Header = ({ props }) => {
   );
 };
 
-export default Header;
+export default AppHeader;
