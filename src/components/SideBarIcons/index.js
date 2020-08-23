@@ -6,7 +6,7 @@ import { navigate } from 'gatsby';
 const SideBar = props => {
   return (
     <div className={styles.side_drawer}>
-      <div className={styles.app_logo}>
+      <div className={styles.app_logo} onClick={() => navigate('/app/dashboard')}>
         <img src={logo} alt="" />
       </div>
       <div className={styles.side_items} onClick={() => navigate('/app/task')}>

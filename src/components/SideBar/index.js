@@ -4,11 +4,9 @@ import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
 
 const SideBar = ({ props }) => {
-  const { isSidebar, sidebarHandler } = props;
-
   return (
-    <div className={isSidebar ? styles.side_drawer_full : styles.side_drawer_icons}>
-      <div className={styles.app_logo}>
+    <div className={styles.side_drawer_full}>
+      <div className={styles.app_logo} onClick={() => navigate('/app/dashboard')}>
         <img src={logo} alt="" />
       </div>
       <div className={styles.side_items} onClick={() => navigate('/app/createtask')}>

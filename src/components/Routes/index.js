@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Router } from '@reach/router';
 import { navigate } from 'gatsby';
+import styles from './routes.module.css';
+
+import Dashboard from '../Dashboard';
 import CreateTask from '../CreateTask';
 import ListTasks from '../ListTasks';
+
 import SideBar from '../SideBar';
 import SideBarIcons from '../SideBarIcons';
+
 import AppHeader from '../AppHeader';
-import styles from './routes.module.css';
 
 const Routes = () => {
   const [isSidebar, toggleSidebar] = useState(false);
@@ -43,7 +47,7 @@ const Routes = () => {
         <AppHeader props={{ isSidebar, sidebarHandler }} />
         <Router>
           {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
-          {/*<Dashboard path="/app/createtask" />*/}
+          <Dashboard path="/app/dashboard" />
           <CreateTask path="/app/createtask" />
           <ListTasks path="/app/listtasks" />
         </Router>
