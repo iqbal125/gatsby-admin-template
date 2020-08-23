@@ -245,7 +245,24 @@
 
 .account_dropdown {
   position: absolute;
-  top: 2em;
-  left: -2em;
-  background-color: aqua;
+  top: 2.8rem;
+  left: -1.55rem;
+  border: 1px solid grey;
+  background-color: white;
+  color: grey;
+  padding: 0.4rem;
+}
+
+.account_dropdown > div {
+  padding-bottom: 0.2rem;
+}
+
+.account_dropdown::after {
+  content: ' ';
+  position: absolute;
+  bottom: 100%;
+  left: 70%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
 }

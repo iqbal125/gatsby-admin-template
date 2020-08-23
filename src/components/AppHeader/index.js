@@ -56,7 +56,7 @@ const AppHeader = ({ props }) => {
               {/* Mobile Hamburger Links*/}
               {navLinks && (
                 <>
-                  <div className={styles.dropdown_home}>
+                  <div className={styles.dropdown}>
                     <Link
                       to="/about"
                       className={styles.header_links_mobile}
@@ -110,9 +110,9 @@ const AppHeader = ({ props }) => {
               )}
               {accountLinks && (
                 <div className={styles.account_dropdown}>
-                  <div>Item 1 </div>
-                  <div>Item 2</div>
-                  <div>Item 3</div>
+                  <div>Account</div>
+                  <div>Settings</div>
+                  <div>Logout</div>
                 </div>
               )}
             </div>

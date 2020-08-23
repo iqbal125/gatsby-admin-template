@@ -19,7 +19,6 @@ const Profile = () => {
 
     let data = { title, description, author };
     await axios.post(`${process.env.GATSBY_SERVER_URL}/api/post/todo`, data);
-    fetchTodos();
     setTitle('');
     setDescription('');
   };
