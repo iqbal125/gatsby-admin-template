@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Router } from '@reach/router';
 import { navigate } from 'gatsby';
-import Profile from '../Profile';
+import Profile from '../CreateTask';
 import SideBar from '../SideBar';
 import SideBarIcons from '../SideBarIcons';
 import AppHeader from '../AppHeader';
@@ -42,7 +42,8 @@ const Routes = () => {
         <AppHeader props={{ isSidebar, sidebarHandler }} />
         <Router>
           {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
-          <Profile path="/app/profile" />
+          {/*<Dashboard path="/app/createtask" />*/}
+          <CreateTask path="/app/createtask" />
         </Router>
       </div>
     </div>

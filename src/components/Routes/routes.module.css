@@ -1,13 +1,11 @@
 .main_with_sidebar {
   display: grid;
   grid-template-columns: 12em auto;
-  min-height: 100vh;
 }
 
 .main_no_sidebar {
   display: grid;
   grid-template-columns: 4em auto;
-  min-height: 100vh;
 }
 
 .side_bar {
