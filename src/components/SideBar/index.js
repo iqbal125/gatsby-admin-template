@@ -11,10 +11,10 @@ const SideBar = ({ props }) => {
       <div className={styles.app_logo}>
         <img src={logo} alt="" />
       </div>
-      <div className={styles.side_items} onClick={() => navigate('/app/task')}>
+      <div className={styles.side_items} onClick={() => navigate('/app/createtask')}>
         Create Task
       </div>
-      <div className={styles.side_items} onClick={() => navigate('/app/task')}>
+      <div className={styles.side_items} onClick={() => navigate('/app/listtasks')}>
         List Tasks
       </div>
       <div className={styles.side_items} onClick={() => navigate('/app/task')}>

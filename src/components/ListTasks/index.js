@@ -5,8 +5,6 @@ import styles from './profile.module.css';
 
 const Todos = () => {
   const [todos, setTodos] = useState(null);
-  const [formTitle, setTitle] = useState('');
-  const [formDescription, setDescription] = useState('');
 
   const context = useContext(AuthContext);
   const { authState } = context;
@@ -30,19 +28,6 @@ const Todos = () => {
   useEffect(() => {
     fetchTodos();
   }, []);
-
-  const postTodo = async event => {
-    event.preventDefault();
-    let author = user ? user.username : '';
-    let title = event.target.title.value;
-    let description = event.target.description.value;
-
-    let data = { title, description, author };
-    await axios.post(`${process.env.GATSBY_SERVER_URL}/api/post/todo`, data);
-    fetchTodos();
-    setTitle('');
-    setDescription('');
-  };
 
   const deleteTodo = async todo => {
     let todo_id = todo.todo_id;
@@ -71,14 +56,6 @@ const Todos = () => {
     setTodoID(todo.todo_id);
     setEditTitle(todo.title);
     setEditDescription(todo.description);
-  };
-
-  const handleTitleChange = event => {
-    setTitle(event.target.value);
-  };
-
-  const handleDescChange = event => {
-    setDescription(event.target.value);
   };
 
   const handleEditTitleChange = event => {

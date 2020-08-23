@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Router } from '@reach/router';
 import { navigate } from 'gatsby';
-import Profile from '../CreateTask';
+import CreateTask from '../CreateTask';
+import ListTasks from '../ListTasks';
 import SideBar from '../SideBar';
 import SideBarIcons from '../SideBarIcons';
 import AppHeader from '../AppHeader';
@@ -44,6 +45,7 @@ const Routes = () => {
           {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
           {/*<Dashboard path="/app/createtask" />*/}
           <CreateTask path="/app/createtask" />
+          <ListTasks path="/app/listtasks" />
         </Router>
       </div>
     </div>
