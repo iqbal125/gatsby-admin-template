@@ -88,11 +88,6 @@ const AppHeader = ({ props }) => {
             {/* Desktop */}
 
             {/* Mobile */}
-            <div className={styles.mobile_logo}>
-              <Link to="/">
-                <img src={logo} alt="" />
-              </Link>
-            </div>
           </div>
 
           <div className={styles.right_header}>

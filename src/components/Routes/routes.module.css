@@ -24,6 +24,12 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  .side_bar {
+    display: none;
+  }
+}
+
 @keyframes sidebarOut {
   from {
     transform: scaleX(12em);
