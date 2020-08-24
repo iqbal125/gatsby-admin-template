@@ -3,6 +3,16 @@ import styles from './sidebar.module.css';
 import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
 
+const AppLinks = [
+  {
+    header: 'Show Links',
+    accordian_links: [
+      { link: 'Create Task', url: '/app/createtask' },
+      { link: 'List Task', url: '/app/listtasks' }
+    ]
+  }
+];
+
 const SideBar = ({ props }) => {
   const [show, setShow] = useState(false);
 
@@ -16,19 +26,22 @@ const SideBar = ({ props }) => {
         </div>
 
         <div className={styles.accordian_container}>
-          <div className={styles.accordian_header} onClick={accordianHandler}>
-            <div>Show Links</div>
-          </div>
-          {show && (
-            <div className={styles.accordian_links}>
-              <div className={styles.side_items} onClick={() => navigate('/app/createtask')}>
-                Create Task
+          {AppLinks.map(link => (
+            <div>
+              <div className={styles.accordian_header} onClick={accordianHandler}>
+                <div>{link.header}</div>
               </div>
-              <div className={styles.side_items} onClick={() => navigate('/app/listtasks')}>
-                List Tasks
-              </div>
+              {show && (
+                <div className={styles.accordian_links}>
+                  {link.accordian_links.map(accLink => (
+                    <div className={styles.side_items} onClick={() => navigate(`${accLink.url}`)}>
+                      {accLink.link}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
+          ))}
         </div>
       </div>
       <div className={styles.side_items_settings} onClick={() => navigate('/app/task')}>
