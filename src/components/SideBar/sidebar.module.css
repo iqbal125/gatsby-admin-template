@@ -3,8 +3,6 @@
 .side_drawer_full {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-top: 2rem;
   background-color: black;
   position: fixed;
   width: 12em;
@@ -14,24 +12,36 @@
   overflow-y: scroll;
 }
 
+.side_drawer_links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
 .side_items {
-  padding: 1em;
+  padding: 0.3em;
+  padding-left: 1em;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
   color: darkgrey;
+}
+
+.side_items_settings {
+  padding: 0.3em;
+  cursor: pointer;
+  font-weight: 600;
+  color: darkgrey;
+  margin-top: auto;
+  margin-bottom: 2rem;
 }
 
 .side_items:hover {
   color: white;
 }
 
-.side_items_settings {
-  padding: 1em;
-  cursor: pointer;
-  font-weight: bold;
-  color: darkgrey;
-  margin-top: auto;
-  margin-bottom: 2rem;
+.side_items_settings:hover {
+  color: white;
 }
 
 @keyframes grow {
@@ -40,15 +50,6 @@
   }
   to {
     width: 12em;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
@@ -66,6 +67,28 @@
   margin-top: -2rem;
   margin-bottom: 2rem;
   cursor: pointer;
-  height: auto;
-  width: 50%;
+  height: 6rem;
+  width: 5rem;
+}
+
+.accordian_header {
+  padding: 0.4em;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.accordian_links {
+  animation: accordianGrow 0.3s ease-out;
+}
+
+@keyframes accordianGrow {
+  from {
+    transform: scaleY(0);
+    transform-origin: top right;
+  }
+  to {
+    transform: scaleY(100%);
+    transform-origin: top right;
+  }
 }
