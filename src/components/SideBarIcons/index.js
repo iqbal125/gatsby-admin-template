@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useRef } from 'react';
-import styles from './sidebar.module.css';
+import styles from './sidebaricons.module.css';
 import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
 
