@@ -8,8 +8,10 @@
   background-color: black;
   position: fixed;
   width: 12em;
+  height: 100%;
   min-height: 100vh;
   animation: grow 0.4s linear;
+  overflow-y: scroll;
 }
 
 .side_items {
@@ -23,7 +25,11 @@
   color: white;
 }
 
-.side_drawer_full > div:nth-child(4) {
+.side_items_settings {
+  padding: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  color: darkgrey;
   margin-top: auto;
   margin-bottom: 2rem;
 }
@@ -60,4 +66,6 @@
   margin-top: -2rem;
   margin-bottom: 2rem;
   cursor: pointer;
+  height: auto;
+  width: 50%;
 }
