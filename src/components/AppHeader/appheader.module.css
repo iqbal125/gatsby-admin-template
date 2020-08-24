@@ -246,15 +246,21 @@
 .account_dropdown {
   position: absolute;
   top: 2.8rem;
-  left: -1.55rem;
+  left: -2.5rem;
   border: 1px solid grey;
   background-color: white;
   color: grey;
-  padding: 0.4rem;
 }
 
-.account_dropdown > div {
-  padding-bottom: 0.2rem;
+.account_dropdown_item {
+  padding: 0.5rem;
+
+  border-bottom: 1px solid black;
+}
+
+.account_dropdown_item:hover {
+  color: black;
+  background-color: aliceblue;
 }
 
 .account_dropdown::after {

@@ -110,9 +110,10 @@ const AppHeader = ({ props }) => {
               )}
               {accountLinks && (
                 <div className={styles.account_dropdown}>
-                  <div>Account</div>
-                  <div>Settings</div>
-                  <div>Logout</div>
+                  <div className={styles.account_dropdown_item}>Account</div>
+
+                  <div className={styles.account_dropdown_item}>Settings</div>
+                  <div className={styles.account_dropdown_item}>Logout</div>
                 </div>
               )}
             </div>
