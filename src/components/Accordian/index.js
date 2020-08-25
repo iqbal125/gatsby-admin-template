@@ -16,9 +16,9 @@ const Accordian = props => {
           <div>{header}</div>
         </div>
         {show && (
-          <div className={styles.accordian_links}>
+          <div>
             {accordian_links.map(accLink => (
-              <div className={styles.side_items} onClick={() => navigate(`${accLink.url}`)}>
+              <div className={styles.accordian_links} onClick={() => navigate(`${accLink.url}`)}>
                 {accLink.link}
               </div>
             ))}

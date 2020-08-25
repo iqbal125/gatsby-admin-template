@@ -13,6 +13,16 @@ import SideBarIcons from '../SideBarIcons';
 import TopHeader from '../TopHeader';
 import AppHeader from '../AppHeader';
 
+const AppLinks = [
+  {
+    header: 'Show Links',
+    accordian_links: [
+      { link: 'Create Task', url: '/app/createtask' },
+      { link: 'List Task', url: '/app/listtasks' }
+    ]
+  }
+];
+
 const Routes = () => {
   const [isSidebar, toggleSidebar] = useState(false);
   const sidebarHandler = () => (isSidebar ? toggleSidebar(false) : toggleSidebar(true));
@@ -36,7 +46,7 @@ const Routes = () => {
     <div className={isSidebar ? styles.main_with_sidebar : styles.main_small_sidebar}>
       {isSidebar ? (
         <div className={styles.side_bar}>
-          <SideBar props={{ isSidebar, sidebarHandler }} />
+          <SideBar AppLinks={AppLinks} />
         </div>
       ) : (
         <div className={styles.side_bar_icons}>
@@ -46,7 +56,7 @@ const Routes = () => {
 
       <div className={styles.content}>
         <div className={styles.top_nav}>
-          <TopHeader />
+          <TopHeader AppLinks={AppLinks} />
         </div>
         <AppHeader props={{ isSidebar, sidebarHandler }} />
         <Router>

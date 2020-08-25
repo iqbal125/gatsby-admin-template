@@ -4,26 +4,9 @@ import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
 import Accordian from '../Accordian';
 
-const AppLinks = [
-  {
-    id: 1,
-    header: 'Show Links',
-    accordian_links: [
-      { link: 'Create Task', url: '/app/createtask' },
-      { link: 'List Task', url: '/app/listtasks' }
-    ]
-  },
-  {
-    id: 2,
-    header: 'Show Links',
-    accordian_links: [
-      { link: 'Create Task', url: '/app/createtask' },
-      { link: 'List Task', url: '/app/listtasks' }
-    ]
-  }
-];
+const SideBar = props => {
+  const { AppLinks } = props;
 
-const SideBar = ({ props }) => {
   return (
     <div className={styles.side_drawer_full}>
       <div className={styles.side_drawer_links}>

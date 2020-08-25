@@ -1,3 +1,8 @@
+.accordian_container {
+  border-bottom: 2px solid red;
+  width: 100%;
+}
+
 .accordian_header {
   padding: 0.4em;
   font-weight: bold;
@@ -6,7 +11,7 @@
 }
 
 .accordian_links {
-  padding: 0.3em;
+  padding: 0.6em;
   padding-left: 1em;
   cursor: pointer;
   font-weight: 600;
