@@ -10,6 +10,7 @@ import ListTasks from '../ListTasks';
 import SideBar from '../SideBar';
 import SideBarIcons from '../SideBarIcons';
 
+import TopHeader from '../TopHeader';
 import AppHeader from '../AppHeader';
 
 const Routes = () => {
@@ -44,6 +45,9 @@ const Routes = () => {
       )}
 
       <div className={styles.content}>
+        <div className={styles.top_nav}>
+          <TopHeader />
+        </div>
         <AppHeader props={{ isSidebar, sidebarHandler }} />
         <Router>
           {/*<PrivateRoute path="/app/profile" component={Profile} />*/}

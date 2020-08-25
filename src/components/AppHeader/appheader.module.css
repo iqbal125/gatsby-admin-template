@@ -103,6 +103,7 @@
     grid-template-columns: auto auto auto;
     padding: 0.5em;
     width: 100%;
+    border-bottom: black 1px solid;
     box-shadow: 0 4px 8px 0 rgba(128, 118, 118, 0.2);
     margin-bottom: 2em;
   }
@@ -211,6 +212,10 @@
   }
 
   .desktop_links {
+    display: none;
+  }
+
+  .side_bar_menu {
     display: none;
   }
 }

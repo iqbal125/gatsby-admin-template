@@ -1,13 +1,31 @@
-.main_with_sidebar {
-  display: grid;
-  grid-template-columns: 12em auto;
+/* Main Layout */
+@media screen and (min-width: 769px) {
+  .main_with_sidebar {
+    display: grid;
+    grid-template-columns: 12em auto;
+  }
+
+  .main_small_sidebar {
+    display: grid;
+    grid-template-columns: 4em auto;
+  }
+  .top_nav {
+    display: none;
+  }
 }
 
-.main_small_sidebar {
-  display: grid;
-  grid-template-columns: 4em auto;
+@media screen and (max-width: 768px) {
 }
 
+/* Content and HEader */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Sidebar */
 .side_bar {
   width: 12em;
   animation: sidebarIn 3s ease-in;
@@ -18,14 +36,12 @@
   animation: sidebarOut 3s ease-out;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 @media screen and (max-width: 768px) {
   .side_bar {
+    display: none;
+  }
+
+  .side_bar_icons {
     display: none;
   }
 }

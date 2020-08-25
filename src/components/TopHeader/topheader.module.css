@@ -1,0 +1,88 @@
+/* Side Nav */
+
+.top_nav {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.side_drawer_links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.side_items {
+  padding: 0.3em;
+  padding-left: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  color: darkgrey;
+}
+
+.side_items_settings {
+  padding: 0.3em;
+  padding-left: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  color: darkgrey;
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+.side_items:hover {
+  color: white;
+}
+
+.side_items_settings:hover {
+  color: white;
+}
+
+@keyframes grow {
+  from {
+    width: 4em;
+  }
+  to {
+    width: 12em;
+  }
+}
+
+.header_photo {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-bottom: 2rem;
+}
+
+.app_logo {
+  padding: 1em;
+  align-self: center;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  height: 6rem;
+  width: 5rem;
+}
+
+.accordian_header {
+  padding: 0.4em;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.accordian_links {
+  animation: accordianGrow 0.3s ease-out;
+}
+
+@keyframes accordianGrow {
+  from {
+    transform: scaleY(0);
+    transform-origin: top right;
+  }
+  to {
+    transform: scaleY(100%);
+    transform-origin: top right;
+  }
+}
