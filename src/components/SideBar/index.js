@@ -10,6 +10,13 @@ const AppLinks = [
       { link: 'Create Task', url: '/app/createtask' },
       { link: 'List Task', url: '/app/listtasks' }
     ]
+  },
+  {
+    header: 'Show Links',
+    accordian_links: [
+      { link: 'Create Task', url: '/app/createtask' },
+      { link: 'List Task', url: '/app/listtasks' }
+    ]
   }
 ];
 

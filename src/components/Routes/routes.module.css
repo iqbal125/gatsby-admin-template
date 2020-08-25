@@ -9,15 +9,13 @@
     display: grid;
     grid-template-columns: 4em auto;
   }
+
   .top_nav {
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
-}
-
-/* Content and HEader */
+/* Content */
 
 .content {
   display: flex;

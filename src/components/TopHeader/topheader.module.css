@@ -3,66 +3,28 @@
 .top_nav {
   background-color: black;
   color: whitesmoke;
+  font-size: 1.2em;
+  padding: 0.8em;
 }
 
-.side_drawer_links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 2rem;
+.menu_icon {
+  display: inline-block;
+  position: relative;
 }
 
-.side_items {
-  padding: 0.3em;
-  padding-left: 1em;
+.menu_dropdown {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border: 1px solid grey;
+  background-color: white;
+  color: grey;
+}
+
+.menu_dropdown_item {
+  padding: 0.5rem;
   cursor: pointer;
-  font-weight: 600;
-  color: darkgrey;
-}
-
-.side_items_settings {
-  padding: 0.3em;
-  padding-left: 1em;
-  cursor: pointer;
-  font-weight: 600;
-  color: darkgrey;
-  margin-top: auto;
-  margin-bottom: 2rem;
-}
-
-.side_items:hover {
-  color: white;
-}
-
-.side_items_settings:hover {
-  color: white;
-}
-
-@keyframes grow {
-  from {
-    width: 4em;
-  }
-  to {
-    width: 12em;
-  }
-}
-
-.header_photo {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  vertical-align: middle;
-  margin-bottom: 2rem;
-}
-
-.app_logo {
-  padding: 1em;
-  align-self: center;
-  margin-top: -2rem;
-  margin-bottom: 2rem;
-  cursor: pointer;
-  height: 6rem;
-  width: 5rem;
+  border-bottom: 1px solid black;
 }
 
 .accordian_header {
