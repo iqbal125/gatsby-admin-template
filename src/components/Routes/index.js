@@ -13,27 +13,34 @@ import SideBarIcons from '../SideBarIcons';
 import TopHeader from '../TopHeader';
 import AppHeader from '../AppHeader';
 
+import { FiArrowRightCircle } from 'react-icons/fi';
+import { FiDisc } from 'react-icons/fi';
+import { FiEdit } from 'react-icons/fi';
+
 const AppLinks = [
   {
     header: 'Show Links',
     accordian_links: [
       { link: 'Create Task', url: '/app/createtask' },
       { link: 'List Task', url: '/app/listtasks' }
-    ]
+    ],
+    icon: FiArrowRightCircle
   },
   {
     header: 'Show Links 2',
     accordian_links: [
       { link: 'Create Task', url: '/app/createtask' },
       { link: 'List Task', url: '/app/listtasks' }
-    ]
+    ],
+    icon: FiDisc
   },
   {
     header: 'Show Links 3',
     accordian_links: [
       { link: 'Create Task', url: '/app/createtask' },
       { link: 'List Task', url: '/app/listtasks' }
-    ]
+    ],
+    icon: FiEdit
   }
 ];
 
@@ -64,7 +71,7 @@ const Routes = () => {
         </div>
       ) : (
         <div className={styles.side_bar_icons}>
-          <SideBarIcons />
+          <SideBarIcons AppLinks={AppLinks} />
         </div>
       )}
 

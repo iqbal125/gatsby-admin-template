@@ -5,17 +5,20 @@ import { navigate } from 'gatsby';
 import { VscSettingsGear } from 'react-icons/vsc';
 
 const SideBar = props => {
+  const { AppLinks } = props;
+  console.log(AppLinks);
+
   return (
     <div className={styles.side_drawer}>
       <div className={styles.app_logo} onClick={() => navigate('/app/dashboard')}>
         <img src={logo} alt="" />
       </div>
-      <div className={styles.side_items} onClick={() => navigate('/app/task')}>
-        C
-      </div>
-      <div className={styles.side_items} onClick={() => navigate('/app/task')}>
-        L
-      </div>
+      {AppLinks.map(link => (
+        <div className={styles.side_items} onClick={() => navigate(`${link.url}`)}>
+          {link.icon()}
+        </div>
+      ))}
+
       <div className={styles.side_items_settings} onClick={() => navigate('/app/task')}>
         <VscSettingsGear />
       </div>
