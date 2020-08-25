@@ -220,6 +220,23 @@
   }
 }
 
+/* Search */
+.search_box {
+  display: flex;
+  margin-left: 3rem;
+}
+
+.search_icon {
+  margin-top: 0.2em;
+  font-size: 1.5em;
+}
+
+.search {
+  padding: 0.5em;
+  border: 2px solid black;
+  border-radius: 1em;
+}
+
 .login_button {
   border: none;
   padding: 0.6em 1.3em 0.6em 1.3em;

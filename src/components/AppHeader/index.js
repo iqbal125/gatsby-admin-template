@@ -6,6 +6,7 @@ import AuthContext from '../../utils/auth_context';
 
 import logo from '../../../static/logos/favicon.ico';
 
+import { BiSearchAlt } from 'react-icons/bi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { MdAccountCircle } from 'react-icons/md';
@@ -41,8 +42,13 @@ const AppHeader = ({ props }) => {
                 </div>
               )}
             </div>
-
-            {/* Mobile */}
+            {/* Desktop and Mobile */}
+            <div className={styles.search_box}>
+              <div className={styles.search_icon}>
+                <BiSearchAlt />
+              </div>
+              <input className={styles.search} type="search" />
+            </div>
           </div>
 
           <div className={styles.mid_header}>
@@ -67,7 +73,6 @@ const AppHeader = ({ props }) => {
               {accountLinks && (
                 <div className={styles.account_dropdown}>
                   <div className={styles.account_dropdown_item}>Account</div>
-
                   <div className={styles.account_dropdown_item}>Settings</div>
                   <div className={styles.account_dropdown_item}>Logout</div>
                 </div>

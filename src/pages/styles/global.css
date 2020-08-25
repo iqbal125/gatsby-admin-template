@@ -9,6 +9,11 @@ html {
   --secondary-color: white;
 }
 
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 *,
 *:before,
 *:after {
