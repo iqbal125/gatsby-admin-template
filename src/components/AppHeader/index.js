@@ -43,45 +43,6 @@ const AppHeader = ({ props }) => {
             </div>
 
             {/* Mobile */}
-            <div className={styles.menu_icon}>
-              {!navLinks ? (
-                <div onClick={navLinksHandler} className={styles.hamburger}>
-                  <GiHamburgerMenu />
-                </div>
-              ) : (
-                <div onClick={navLinksHandler} className={styles.close_button}>
-                  <AiOutlineClose />
-                </div>
-              )}
-              {/* Mobile Hamburger Links*/}
-              {navLinks && (
-                <>
-                  <div className={styles.dropdown}>
-                    <Link
-                      to="/about"
-                      className={styles.header_links_mobile}
-                      activeClassName={styles.header_link_active}
-                    >
-                      About
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className={styles.header_links_mobile}
-                      activeClassName={styles.header_link_active}
-                    >
-                      Contact
-                    </Link>
-                    <Link
-                      to="/services"
-                      className={styles.header_links_mobile}
-                      activeClassName={styles.header_link_active}
-                    >
-                      Services
-                    </Link>
-                  </div>
-                </>
-              )}
-            </div>
           </div>
 
           <div className={styles.mid_header}>

@@ -3,7 +3,7 @@
   grid-template-columns: 12em auto;
 }
 
-.main_no_sidebar {
+.main_small_sidebar {
   display: grid;
   grid-template-columns: 4em auto;
 }

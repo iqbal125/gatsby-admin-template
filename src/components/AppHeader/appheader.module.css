@@ -1,6 +1,6 @@
 /* Desktop Header */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .header_home {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -97,7 +97,7 @@
 
 /* Mobile Header */
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
   .header_home {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -105,13 +105,6 @@
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(128, 118, 118, 0.2);
     margin-bottom: 2em;
-  }
-
-  .header_not_home {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    padding: 0.5em;
   }
 
   .right_header {
@@ -154,6 +147,11 @@
     cursor: pointer;
     margin-top: 0.2em;
     padding: 0.2em;
+  }
+
+  .side_bar_menu {
+    font-size: 0.8rem;
+    padding: 0.2rem;
   }
 
   @keyframes appearIn {

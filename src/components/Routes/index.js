@@ -32,7 +32,7 @@ const Routes = () => {
   };
 
   return (
-    <div className={isSidebar ? styles.main_with_sidebar : styles.main_no_sidebar}>
+    <div className={isSidebar ? styles.main_with_sidebar : styles.main_small_sidebar}>
       {isSidebar ? (
         <div className={styles.side_bar}>
           <SideBar props={{ isSidebar, sidebarHandler }} />
