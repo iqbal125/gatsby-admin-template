@@ -19,6 +19,7 @@ import { FiEdit } from 'react-icons/fi';
 
 const AppLinks = [
   {
+    id: 1,
     header: 'Show Links',
     accordian_links: [
       { link: 'Create Task', url: '/app/createtask' },
@@ -27,6 +28,7 @@ const AppLinks = [
     icon: FiArrowRightCircle
   },
   {
+    id: 2,
     header: 'Show Links 2',
     accordian_links: [
       { link: 'Create Task', url: '/app/createtask' },
@@ -35,6 +37,7 @@ const AppLinks = [
     icon: FiDisc
   },
   {
+    id: 3,
     header: 'Show Links 3',
     accordian_links: [
       { link: 'Create Task', url: '/app/createtask' },

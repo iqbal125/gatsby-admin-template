@@ -2,17 +2,15 @@ import React, { useState } from 'react';
 import styles from './icon_menu.module.css';
 
 const IconMenu = props => {
-  const { AppLink } = props;
-  const { icon, header, accordian_links } = AppLink;
-  const [navLinks, toggleNavLinks] = useState(false);
-  const navLinksHandler = () => (navLinks ? toggleNavLinks(false) : toggleNavLinks(true));
+  const { AppLink, openID, setOpenID } = props;
+  const { id, icon, header, accordian_links } = AppLink;
 
   return (
     <div className={styles.container}>
-      <div onClick={navLinksHandler} className={styles.side_items}>
+      <div onClick={() => setOpenID(id)} className={styles.side_items}>
         {icon()}
       </div>
-      {navLinks && (
+      {id === openID && (
         <div className={styles.side_menu}>
           <div>{header}</div>
           <div>
