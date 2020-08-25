@@ -32,6 +32,9 @@ const TopHeader = props => {
                 <Accordian AppLink={AppLink} />
               ))}
             </div>
+            <div className={styles.side_items_settings} onClick={() => navigate('/app/task')}>
+              Settings
+            </div>
           </div>
         )}
       </div>
