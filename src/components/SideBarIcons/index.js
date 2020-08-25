@@ -2,6 +2,7 @@ import React, { useEffect, useContext, useRef } from 'react';
 import styles from './sidebaricons.module.css';
 import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
+import { VscSettingsGear } from 'react-icons/vsc';
 
 const SideBar = props => {
   return (
@@ -15,8 +16,8 @@ const SideBar = props => {
       <div className={styles.side_items} onClick={() => navigate('/app/task')}>
         L
       </div>
-      <div className={styles.side_items} onClick={() => navigate('/app/task')}>
-        S
+      <div className={styles.side_items_settings} onClick={() => navigate('/app/task')}>
+        <VscSettingsGear />
       </div>
     </div>
   );
