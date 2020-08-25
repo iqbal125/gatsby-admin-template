@@ -30,6 +30,19 @@
   }
 }
 
+.side_items_settings:hover {
+  color: white;
+}
+
+.side_items_settings {
+  padding: 1em;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: darkgrey;
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
 .app_logo {
   padding: 1em;
   align-self: center;
