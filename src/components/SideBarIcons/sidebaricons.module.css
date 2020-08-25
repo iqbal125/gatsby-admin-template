@@ -12,31 +12,6 @@
   animation: grow 0.4s linear;
 }
 
-.side_items {
-  padding: 1em;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: darkgrey;
-}
-
-.side_items:hover {
-  color: white;
-}
-
-.side_items_settings:hover {
-  color: white;
-}
-
-.side_items_settings {
-  padding: 1em;
-  cursor: pointer;
-  font-size: 1.2em;
-  color: darkgrey;
-  margin-top: auto;
-  margin-bottom: 2rem;
-}
-
 @keyframes grow {
   from {
     width: 12em;
@@ -53,14 +28,6 @@
   to {
     opacity: 1;
   }
-}
-
-.header_photo {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  vertical-align: middle;
-  margin-bottom: 2rem;
 }
 
 .app_logo {

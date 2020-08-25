@@ -4,7 +4,9 @@ import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
 import { VscSettingsGear } from 'react-icons/vsc';
 
-const SideBar = props => {
+import IconMenu from '../IconMenu';
+
+const SideBarIcons = props => {
   const { AppLinks } = props;
   console.log(AppLinks);
 
@@ -13,12 +15,9 @@ const SideBar = props => {
       <div className={styles.app_logo} onClick={() => navigate('/app/dashboard')}>
         <img src={logo} alt="" />
       </div>
-      {AppLinks.map(link => (
-        <div className={styles.side_items} onClick={() => navigate(`${link.url}`)}>
-          {link.icon()}
-        </div>
+      {AppLinks.map(AppLink => (
+        <IconMenu AppLink={AppLink} />
       ))}
-
       <div className={styles.side_items_settings} onClick={() => navigate('/app/task')}>
         <VscSettingsGear />
       </div>
@@ -26,4 +25,4 @@ const SideBar = props => {
   );
 };
 
-export default SideBar;
+export default SideBarIcons;
