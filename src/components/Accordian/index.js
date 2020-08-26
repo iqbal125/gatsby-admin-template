@@ -11,14 +11,18 @@ const Accordian = props => {
 
   return (
     <div className={styles.accordian_container}>
-      <div key={id}>
+      <div>
         <div className={styles.accordian_header} onClick={accordianHandler}>
           <div>{header}</div>
         </div>
         {show && (
           <div>
             {accordian_links.map(accLink => (
-              <div className={styles.accordian_links} onClick={() => navigate(`${accLink.url}`)}>
+              <div
+                key={accLink.link_id}
+                className={styles.accordian_links}
+                onClick={() => navigate(`${accLink.url}`)}
+              >
                 {accLink.link}
               </div>
             ))}

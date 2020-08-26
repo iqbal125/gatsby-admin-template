@@ -22,8 +22,8 @@ const AppLinks = [
     id: 1,
     header: 'Show Links',
     accordian_links: [
-      { link: 'Create Task', url: '/app/createtask' },
-      { link: 'List Task', url: '/app/listtasks' }
+      { link_id: 1, link: 'Create Task', url: '/app/createtask' },
+      { link_id: 2, link: 'List Task', url: '/app/listtasks' }
     ],
     icon: FiArrowRightCircle
   },
@@ -31,8 +31,8 @@ const AppLinks = [
     id: 2,
     header: 'Show Links 2',
     accordian_links: [
-      { link: 'Create Task', url: '/app/createtask' },
-      { link: 'List Task', url: '/app/listtasks' }
+      { link_id: 3, link: 'Create Task', url: '/app/createtask' },
+      { link_id: 4, link: 'List Task', url: '/app/listtasks' }
     ],
     icon: FiDisc
   },
@@ -40,8 +40,8 @@ const AppLinks = [
     id: 3,
     header: 'Show Links 3',
     accordian_links: [
-      { link: 'Create Task', url: '/app/createtask' },
-      { link: 'List Task', url: '/app/listtasks' }
+      { link_id: 5, link: 'Create Task', url: '/app/createtask' },
+      { link_id: 6, link: 'List Task', url: '/app/listtasks' }
     ],
     icon: FiEdit
   }

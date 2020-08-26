@@ -32,7 +32,11 @@ const IconMenu = props => {
           <div className={styles.side_menu_header}>{header}</div>
           <div className={styles.side_menu_links}>
             {accordian_links.map(acc_link => (
-              <div className={styles.side_menu_item} onClick={() => navigate(`${acc_link.url}`)}>
+              <div
+                key={acc_link.link_id}
+                className={styles.side_menu_item}
+                onClick={() => navigate(`${acc_link.url}`)}
+              >
                 {acc_link.link}
               </div>
             ))}
