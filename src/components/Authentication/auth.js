@@ -15,30 +15,32 @@ const Auth = () => {
   const context = useContext(AuthContext);
 
   useEffect(() => {
-    context.firebase.auth().signOut();
-    setTimeout(() => context.LogOut(), 200);
+    //context.firebase.auth().signOut();
+    //setTimeout(() => context.LogOut(), 200);
   }, []);
 
-  const uiConfig = {
-    credentialHelper: 'none',
-    signInFlow: 'popup',
-    signInOptions: [
-      context.firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      context.firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      context.firebase.auth.FacebookAuthProvider.PROVIDER_ID
-    ],
+  const uiConfig = context.firebase
+    ? {
+        credentialHelper: 'none',
+        signInFlow: 'popup',
+        signInOptions: [
+          context.firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          context.firebase.auth.GithubAuthProvider.PROVIDER_ID,
+          context.firebase.auth.FacebookAuthProvider.PROVIDER_ID
+        ],
 
-    callbacks: {
-      signInSuccessWithAuthResult: function(authResult) {
-        saveProfile(authResult);
-        return false;
-      },
-      signInFailure: function(error) {
-        console.log(error);
-        setresMessage('Signin Failed');
+        callbacks: {
+          signInSuccessWithAuthResult: function(authResult) {
+            saveProfile(authResult);
+            return false;
+          },
+          signInFailure: function(error) {
+            console.log(error);
+            setresMessage('Signin Failed');
+          }
+        }
       }
-    }
-  };
+    : {};
 
   const saveProfile = authResult => {
     console.log(authResult);

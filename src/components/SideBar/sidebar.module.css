@@ -19,14 +19,6 @@
   padding-top: 2rem;
 }
 
-.side_items {
-  padding: 0.3em;
-  padding-left: 1em;
-  cursor: pointer;
-  font-weight: 600;
-  color: darkgrey;
-}
-
 .side_items_settings {
   padding: 0.3em;
   padding-left: 1em;
@@ -35,10 +27,6 @@
   color: darkgrey;
   margin-top: auto;
   margin-bottom: 2rem;
-}
-
-.side_items:hover {
-  color: white;
 }
 
 .side_items_settings:hover {

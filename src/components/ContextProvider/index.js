@@ -6,6 +6,8 @@ import { authReducer, initialStateAuth } from '../../store/reducers/auth_reducer
 import { SideDrawerReducer, initialStateSide } from '../../store/reducers/side_drawer_reducer';
 import { saveUserAction, Logout } from '../../store/actions/actions';
 import { SideDrawerOpen, SideDrawerClose } from '../../store/actions/actions';
+import useFirebase from '../../Firebase/useFirebase';
+
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
@@ -33,9 +35,10 @@ const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     silentAuth();
-    if (!firebase.apps.length) {
-      firebase.initializeApp(config);
-    }
+
+    //if (!firebase.apps.length) {
+    //  firebase.initializeApp(config);
+    //}
   }, []); // eslint-disable-line
 
   //logs in user and saves to global store
