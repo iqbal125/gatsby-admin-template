@@ -21,8 +21,8 @@
   border: 1px solid black;
   width: max-content;
   padding: 0.5rem;
-  left: 3.5rem;
-  top: 1.5rem;
+  left: 4rem;
+  top: 1rem;
 }
 
 .side_menu_header {
@@ -36,4 +36,14 @@
   font-size: 0.9em;
   padding: 0.4em;
   font-weight: bold;
+}
+
+.side_menu::after {
+  content: ' ';
+  position: absolute;
+  top: 10%;
+  right: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
 }

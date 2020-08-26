@@ -17,7 +17,6 @@ const IconMenu = props => {
   const handleClickOutside = event => {
     if (ref.current && !ref.current.contains(event.target)) {
       if (openID === id) {
-        console.log(ref.current, event.target);
         setOpenID(null);
       }
     }
