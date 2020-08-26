@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.side_items {
+.icons {
   padding: 1em;
   cursor: pointer;
   font-weight: bold;
@@ -11,13 +11,29 @@
   color: darkgrey;
 }
 
-.side_items:hover {
+.icons:hover {
   color: white;
 }
 
 .side_menu {
   position: absolute;
   background-color: white;
+  border: 1px solid black;
+  width: max-content;
+  padding: 0.5rem;
   left: 3.5rem;
   top: 1.5rem;
+}
+
+.side_menu_header {
+  text-align: center;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px red solid;
+}
+
+.side_menu_item {
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 0.4em;
+  font-weight: bold;
 }
