@@ -1,28 +1,49 @@
-.form_container {
+.form_wrap {
+}
+
+h3 {
+  text-align: center;
+}
+
+.container_reset {
+  padding: 1em;
+  margin-bottom: 7em;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.form_input {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-radius: 1em;
+}
+
+.form_button {
   padding: 1em;
 }
 
-.after_section {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  margin: 1em;
+.error_text {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 1em;
 }
 
-.alt_button {
+.submit_button {
   margin-top: 1em;
   margin-bottom: 1em;
   align-self: center;
-  border: none;
   padding: 0.8em 1.3em 0.8em 1.3em;
   background-color: blue;
   color: white;
   border: none;
   font-size: 1em;
   font-weight: bold;
+  border-radius: 1em;
   cursor: pointer;
 }
 
@@ -52,10 +73,10 @@
 }
 
 @keyframes spin {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }

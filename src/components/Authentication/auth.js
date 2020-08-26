@@ -5,9 +5,13 @@ import { navigate } from 'gatsby';
 import AuthContext from '../../utils/auth_context';
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
+import LoginForm from './forms/loginform';
+import SignUpForm from './forms/signupform';
 
 const Auth = () => {
   const [isLoading, setLoading] = useState(false);
+  const [resMessage, setresMessage] = useState(null);
+  const [isSignIn, setSignIn] = useState(true);
   const context = useContext(AuthContext);
 
   useEffect(() => {
@@ -21,8 +25,7 @@ const Auth = () => {
     signInOptions: [
       context.firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       context.firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      context.firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      context.firebase.auth.EmailAuthProvider.PROVIDER_ID
+      context.firebase.auth.FacebookAuthProvider.PROVIDER_ID
     ],
 
     callbacks: {
@@ -32,6 +35,7 @@ const Auth = () => {
       },
       signInFailure: function(error) {
         console.log(error);
+        setresMessage('Signin Failed');
       }
     }
   };
@@ -78,7 +82,32 @@ const Auth = () => {
           <div className={styles.loading_background}></div>
         </>
       )}
-      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={context.firebase.auth()} />
+      <h3>{resMessage}</h3>
+      {isSignIn && (
+        <>
+          <LoginForm />
+          <div className={styles.after_section}>
+            <div>Dont have an Account? &nbsp;</div>
+            <button className={styles.alt_button} onClick={() => setSignIn(false)}>
+              SignUp
+            </button>
+          </div>
+        </>
+      )}
+      {!isSignIn && (
+        <>
+          <SignUpForm />
+          <div className={styles.after_section}>
+            <div>Already have an Account? &nbsp;</div>
+            <button className={styles.alt_button} onClick={() => setSignIn(true)}>
+              Login
+            </button>
+          </div>
+        </>
+      )}
+      {context.firebase && (
+        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={context.firebase.auth()} />
+      )}
     </div>
   );
 };
