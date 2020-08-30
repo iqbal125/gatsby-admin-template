@@ -6,7 +6,6 @@ import { authReducer, initialStateAuth } from '../../store/reducers/auth_reducer
 import { SideDrawerReducer, initialStateSide } from '../../store/reducers/side_drawer_reducer';
 import { saveUserAction, Logout } from '../../store/actions/actions';
 import { SideDrawerOpen, SideDrawerClose } from '../../store/actions/actions';
-import useFirebase from '../../Firebase/useFirebase';
 
 import firebase from 'firebase/app';
 import 'firebase/auth';
