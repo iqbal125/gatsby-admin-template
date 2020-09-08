@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import styles from './applinkheader.module.css';
-import { navigate } from 'gatsby';
+import { navigate, Link } from 'gatsby';
 
 const AppLinkHeader = props => {
   const { AppLink } = props;
@@ -8,11 +8,9 @@ const AppLinkHeader = props => {
 
   return (
     <div key={id} className={styles.accordian_container}>
-      <div>
-        <div className={styles.accordian_header} onClick={() => navigate(url)}>
-          <div>{header}</div>
-        </div>
-      </div>
+      <Link to={url} className={styles.app_link_header} activeClassName={styles.header_link_active}>
+        {header}
+      </Link>
     </div>
   );
 };

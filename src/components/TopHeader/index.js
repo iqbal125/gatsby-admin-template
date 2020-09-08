@@ -5,6 +5,7 @@ import { navigate } from 'gatsby';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import Accordian from '../Accordian';
+import AppLinkHeader from '../AppLinkHeader';
 
 const TopHeader = props => {
   const { AppLinks } = props;
@@ -29,7 +30,7 @@ const TopHeader = props => {
           <div className={styles.menu_dropdown}>
             <div className={styles.accordian_container}>
               {AppLinks.map(AppLink => (
-                <Accordian AppLink={AppLink} />
+                <AppLinkHeader AppLink={AppLink} />
               ))}
             </div>
             <div className={styles.side_items_settings} onClick={() => navigate('/app/task')}>
