@@ -1,5 +1,5 @@
 @media screen and (max-width: 768px) {
-  .accordian_container {
+  .app_link_container {
     width: 100%;
   }
 
@@ -13,7 +13,7 @@
 }
 
 @media screen and (min-width: 769px) {
-  .accordian_container {
+  .app_link_container {
     width: 100%;
     padding: 1rem;
     margin-top: 0.5rem;

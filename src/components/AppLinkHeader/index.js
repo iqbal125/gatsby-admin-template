@@ -7,7 +7,7 @@ const AppLinkHeader = props => {
   const { id, header, url } = AppLink;
 
   return (
-    <div key={id} className={styles.accordian_container}>
+    <div key={id} className={styles.app_link_container}>
       <Link to={url} className={styles.app_link_header} activeClassName={styles.header_link_active}>
         {header}
       </Link>
