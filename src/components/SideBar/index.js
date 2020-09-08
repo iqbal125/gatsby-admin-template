@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styles from './sidebar.module.css';
 import logo from '../../../static/logos/favicon.ico';
 import { navigate } from 'gatsby';
-import Accordian from '../Accordian';
+
+import AppLinkHeader from '../AppLinkHeader';
 
 const SideBar = props => {
   const { AppLinks } = props;
@@ -14,7 +15,7 @@ const SideBar = props => {
           <img src={logo} alt="" />
         </div>
         {AppLinks.map(AppLink => (
-          <Accordian AppLink={AppLink} />
+          <AppLinkHeader AppLink={AppLink} />
         ))}
       </div>
       <div className={styles.side_items_settings} onClick={() => navigate('/app/task')}>

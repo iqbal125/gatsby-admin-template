@@ -4,7 +4,7 @@ import { navigate } from 'gatsby';
 
 const IconMenu = props => {
   const { AppLink, openID, setOpenID } = props;
-  const { id, icon, header, accordian_links } = AppLink;
+  const { id, icon, header, url } = AppLink;
   const ref = useRef(null);
 
   useEffect(() => {
@@ -29,17 +29,8 @@ const IconMenu = props => {
       </div>
       {id === openID && (
         <div ref={ref} className={styles.side_menu}>
-          <div className={styles.side_menu_header}>{header}</div>
-          <div className={styles.side_menu_links}>
-            {accordian_links.map(acc_link => (
-              <div
-                key={acc_link.link_id}
-                className={styles.side_menu_item}
-                onClick={() => navigate(`${acc_link.url}`)}
-              >
-                {acc_link.link}
-              </div>
-            ))}
+          <div onClick={() => navigate(`${url}`)} className={styles.side_menu_header}>
+            {header}
           </div>
         </div>
       )}

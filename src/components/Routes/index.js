@@ -21,28 +21,19 @@ const AppLinks = [
   {
     id: 1,
     header: 'Show Links',
-    accordian_links: [
-      { link_id: 1, link: 'Create Task', url: '/app/createtask' },
-      { link_id: 2, link: 'List Task', url: '/app/listtasks' }
-    ],
+    url: '/app/createtask',
     icon: FiArrowRightCircle
   },
   {
     id: 2,
     header: 'Show Links 2',
-    accordian_links: [
-      { link_id: 3, link: 'Create Task', url: '/app/createtask' },
-      { link_id: 4, link: 'List Task', url: '/app/listtasks' }
-    ],
+    url: '/app/createtask',
     icon: FiDisc
   },
   {
     id: 3,
     header: 'Show Links 3',
-    accordian_links: [
-      { link_id: 5, link: 'Create Task', url: '/app/createtask' },
-      { link_id: 6, link: 'List Task', url: '/app/listtasks' }
-    ],
+    url: '/app/createtask',
     icon: FiEdit
   }
 ];
