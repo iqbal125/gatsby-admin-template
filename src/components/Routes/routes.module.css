@@ -15,6 +15,16 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .side_bar {
+    display: none;
+  }
+
+  .side_bar_icons {
+    display: none;
+  }
+}
+
 /* Content */
 
 .content {
@@ -26,29 +36,8 @@
 /* Sidebar */
 .side_bar {
   width: 12em;
-  animation: sidebarIn 3s ease-in;
 }
 
 .side_bar_icons {
   width: 4em;
-  animation: sidebarOut 3s ease-out;
-}
-
-@media screen and (max-width: 768px) {
-  .side_bar {
-    display: none;
-  }
-
-  .side_bar_icons {
-    display: none;
-  }
-}
-
-@keyframes sidebarOut {
-  from {
-    transform: scaleX(12em);
-  }
-  to {
-    transform: scaleX(4em);
-  }
 }

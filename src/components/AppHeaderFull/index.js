@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import styles from './appheader.module.css';
+import styles from './appheaderfull.module.css';
 
 import { Link } from 'gatsby';
 import AuthContext from '../../utils/auth_context';
@@ -9,7 +9,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { MdAccountCircle } from 'react-icons/md';
 
-const AppHeader = ({ props }) => {
+const AppHeaderFull = ({ props }) => {
   const [navLinks, toggleNavLinks] = useState(false);
   const [accountLinks, toggleAccountLinks] = useState(false);
 
@@ -84,4 +84,4 @@ const AppHeader = ({ props }) => {
   );
 };
 
-export default AppHeader;
+export default AppHeaderFull;

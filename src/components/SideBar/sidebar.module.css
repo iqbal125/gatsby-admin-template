@@ -59,25 +59,3 @@
   height: 6rem;
   width: 5rem;
 }
-
-.accordian_header {
-  padding: 0.4em;
-  font-weight: bold;
-  cursor: pointer;
-  color: white;
-}
-
-.accordian_links {
-  animation: accordianGrow 0.3s ease-out;
-}
-
-@keyframes accordianGrow {
-  from {
-    transform: scaleY(0);
-    transform-origin: top right;
-  }
-  to {
-    transform: scaleY(100%);
-    transform-origin: top right;
-  }
-}
