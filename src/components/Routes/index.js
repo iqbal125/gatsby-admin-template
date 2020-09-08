@@ -12,7 +12,6 @@ import SideBarIcons from '../SideBarIcons';
 
 import TopHeader from '../TopHeader';
 import AppHeader from '../AppHeader';
-import AppHeaderFull from '../AppHeaderFull';
 
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { FiDisc } from 'react-icons/fi';
@@ -74,6 +73,7 @@ const Routes = () => {
         <div className={styles.top_nav}>
           <TopHeader AppLinks={AppLinks} />
         </div>
+
         <AppHeader props={{ isSidebar, sidebarHandler }} />
 
         <Router>
