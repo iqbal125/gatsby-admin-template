@@ -1,10 +1,12 @@
 @media screen and (max-width: 768px) {
   .app_link_container {
     width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
   }
 
   .app_link_header {
-    padding: 0.6em;
+    text-decoration: none;
     margin-top: 1em;
     font-weight: bold;
     cursor: pointer;
