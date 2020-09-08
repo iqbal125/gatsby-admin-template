@@ -74,15 +74,8 @@ const Routes = () => {
         <div className={styles.top_nav}>
           <TopHeader AppLinks={AppLinks} />
         </div>
-        {isSidebar ? (
-          <div className={styles.app_header}>
-            <AppHeader props={{ isSidebar, sidebarHandler }} />
-          </div>
-        ) : (
-          <div className={styles.app_header_full}>
-            <AppHeaderFull props={{ isSidebar, sidebarHandler }} />
-          </div>
-        )}
+        <AppHeader props={{ isSidebar, sidebarHandler }} />
+
         <Router>
           {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
           <Dashboard path="/app/dashboard" />
