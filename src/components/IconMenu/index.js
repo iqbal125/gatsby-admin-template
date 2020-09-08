@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './icon_menu.module.css';
-import { navigate } from 'gatsby';
+import { Link } from 'gatsby';
 
 const IconMenu = props => {
   const { AppLink, openID, setOpenID } = props;
@@ -8,9 +8,9 @@ const IconMenu = props => {
   const ref = useRef(null);
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('mouseover', handleClickOutside);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('mouseover', handleClickOutside);
     };
   });
 
@@ -23,15 +23,15 @@ const IconMenu = props => {
   };
 
   return (
-    <div className={styles.container}>
-      <div onClick={() => setOpenID(id)} className={styles.icons}>
-        {icon()}
+    <div onMouseOver={() => setOpenID(id)} className={styles.container}>
+      <div className={styles.icon_container}>
+        <Link to={url} className={styles.icons} activeClassName={styles.icon_active}>
+          {icon()}
+        </Link>
       </div>
       {id === openID && (
         <div ref={ref} className={styles.side_menu}>
-          <div onClick={() => navigate(`${url}`)} className={styles.side_menu_header}>
-            {header}
-          </div>
+          <div className={styles.side_menu_header}>{header}</div>
         </div>
       )}
     </div>
