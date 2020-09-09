@@ -12,24 +12,6 @@
   animation: shrink 0.4s linear;
 }
 
-@keyframes shrink {
-  from {
-    width: var(--side-bar-full-length);
-  }
-  to {
-    width: var(--side-bar-icon-length);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .side_items_settings:hover {
   color: white;
 }
@@ -49,4 +31,13 @@
   margin-top: -2rem;
   margin-bottom: 2rem;
   cursor: pointer;
+}
+
+@keyframes shrink {
+  from {
+    width: var(--side-bar-full-length);
+  }
+  to {
+    width: var(--side-bar-icon-length);
+  }
 }

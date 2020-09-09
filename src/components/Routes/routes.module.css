@@ -27,6 +27,13 @@
   flex-direction: column;
 }
 
+.app_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Sidebar */
 .side_bar {
   width: auto;

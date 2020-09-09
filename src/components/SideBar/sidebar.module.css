@@ -12,15 +12,6 @@
   animation: grow 0.4s linear;
 }
 
-@keyframes grow {
-  from {
-    width: var(--side-bar-icon-length);
-  }
-  to {
-    width: var(--side-bar-full-length);
-  }
-}
-
 .side_drawer_links {
   display: flex;
   flex-direction: column;
@@ -58,4 +49,13 @@
   cursor: pointer;
   height: 6rem;
   width: 5rem;
+}
+
+@keyframes grow {
+  from {
+    width: var(--side-bar-icon-length);
+  }
+  to {
+    width: var(--side-bar-full-length);
+  }
 }

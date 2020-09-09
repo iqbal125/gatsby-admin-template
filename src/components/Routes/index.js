@@ -20,14 +20,14 @@ import { FiEdit } from 'react-icons/fi';
 const AppLinks = [
   {
     id: 1,
-    header: 'Show Links',
-    url: '/app/createtask1',
+    header: 'Create Task',
+    url: '/app/createtask',
     icon: FiArrowRightCircle
   },
   {
     id: 2,
-    header: 'Show Links 2',
-    url: '/app/createtask2',
+    header: 'List Tasks',
+    url: '/app/listtasks',
     icon: FiDisc
   },
   {
@@ -77,12 +77,13 @@ const Routes = () => {
           <AppHeader props={{ isSidebar, sidebarHandler }} />
         </div>
 
-        <Router>
-          {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
-          <Dashboard path="/app/dashboard" />
-          <CreateTask path="/app/createtask" />
-          <ListTasks path="/app/listtasks" />
-        </Router>
+        <div className={styles.app_wrapper}>
+          <Router>
+            <Dashboard path="/app/dashboard" />
+            <CreateTask path="/app/createtask" />
+            <ListTasks path="/app/listtasks" />
+          </Router>
+        </div>
       </div>
     </div>
   );
