@@ -7,6 +7,8 @@ html {
 :root {
   --primary-color: lightblue;
   --secondary-color: white;
+  --side-bar-full-length: 14rem;
+  --side-bar-icon-length: 6rem;
 }
 
 textarea:focus,

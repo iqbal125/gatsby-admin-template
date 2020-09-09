@@ -8,16 +8,16 @@
   background-color: black;
   position: sticky;
   min-height: 100vh;
-  width: 6rem;
+  width: var(--side-bar-icon-length);
   animation: shrink 0.4s linear;
 }
 
 @keyframes shrink {
   from {
-    width: 12rem;
+    width: var(--side-bar-full-length);
   }
   to {
-    width: 6rem;
+    width: var(--side-bar-icon-length);
   }
 }
 
