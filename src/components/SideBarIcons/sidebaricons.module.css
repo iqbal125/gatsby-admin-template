@@ -8,15 +8,16 @@
   background-color: black;
   position: sticky;
   min-height: 100vh;
-  animation: grow 0.4s linear;
+  width: 6rem;
+  animation: shrink 0.4s linear;
 }
 
-@keyframes grow {
+@keyframes shrink {
   from {
     width: 12rem;
   }
   to {
-    width: 4rem;
+    width: 6rem;
   }
 }
 
