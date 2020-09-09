@@ -2,7 +2,7 @@
 @media screen and (min-width: 769px) {
   .main {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: max-content auto;
   }
 
   .top_nav {

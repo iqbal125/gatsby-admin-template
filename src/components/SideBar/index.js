@@ -11,9 +11,9 @@ const SideBar = props => {
   return (
     <div className={styles.side_drawer_full}>
       <div className={styles.side_drawer_links}>
-        {/*<div className={styles.app_logo} onClick={() => navigate('/app/dashboard')}>
+        <div className={styles.app_logo} onClick={() => navigate('/app/dashboard')}>
           <img src={logo} alt="" />
-        </div>*/}
+        </div>
         {AppLinks.map(AppLink => (
           <AppLinkHeader AppLink={AppLink} />
         ))}

@@ -2,14 +2,24 @@
 
 .side_drawer_full {
   display: flex;
+  padding: 1.3rem;
   flex-direction: column;
   background-color: black;
   position: sticky;
   width: inherit;
   height: 100%;
   min-height: 100vh;
-  animation: grow 0.4s linear;
   overflow-y: scroll;
+  animation: grow 0.4s linear;
+}
+
+@keyframes grow {
+  from {
+    width: 4rem;
+  }
+  to {
+    width: 12rem;
+  }
 }
 
 .side_drawer_links {
@@ -31,15 +41,6 @@
 
 .side_items_settings:hover {
   color: white;
-}
-
-@keyframes grow {
-  from {
-    width: 4em;
-  }
-  to {
-    width: 12em;
-  }
 }
 
 .header_photo {

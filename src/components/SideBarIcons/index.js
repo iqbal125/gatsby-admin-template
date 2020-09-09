@@ -11,9 +11,9 @@ const SideBarIcons = props => {
 
   return (
     <div className={styles.side_drawer}>
-      {/*<div className={styles.app_logo} onClick={() => navigate('/app/dashboard')}>
+      <div className={styles.app_logo} onClick={() => navigate('/app/dashboard')}>
         <img src={logo} alt="" />
-      </div>*/}
+      </div>
       {AppLinks.map(AppLink => (
         <IconMenu openID={openID} setOpenID={setOpenID} AppLink={AppLink} />
       ))}

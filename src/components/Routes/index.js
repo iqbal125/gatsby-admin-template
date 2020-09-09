@@ -59,7 +59,15 @@ const Routes = () => {
 
   return (
     <div className={styles.main}>
-      {isSidebar ? <SideBar AppLinks={AppLinks} /> : <SideBarIcons AppLinks={AppLinks} />}
+      {isSidebar ? (
+        <div className={styles.side_bar}>
+          <SideBar AppLinks={AppLinks} />
+        </div>
+      ) : (
+        <div className={styles.side_bar_icons}>
+          <SideBarIcons AppLinks={AppLinks} />
+        </div>
+      )}
 
       <div className={styles.content}>
         <div className={styles.top_nav}>

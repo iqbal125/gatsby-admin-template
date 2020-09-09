@@ -7,17 +7,16 @@
   padding-top: 2rem;
   background-color: black;
   position: sticky;
-
   min-height: 100vh;
-  /*animation: grow 0.4s linear;*/
+  animation: grow 0.4s linear;
 }
 
 @keyframes grow {
   from {
-    width: 12em;
+    width: 12rem;
   }
   to {
-    width: 4em;
+    width: 4rem;
   }
 }
 
