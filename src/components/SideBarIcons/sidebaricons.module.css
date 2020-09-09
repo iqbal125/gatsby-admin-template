@@ -6,10 +6,10 @@
   align-items: center;
   padding-top: 2rem;
   background-color: black;
-  position: fixed;
-  width: inherit;
+  position: sticky;
+
   min-height: 100vh;
-  animation: grow 0.4s linear;
+  /*animation: grow 0.4s linear;*/
 }
 
 @keyframes grow {

@@ -24,63 +24,59 @@ const AppHeader = ({ props }) => {
   const menuHandler = () => (accountLinks ? toggleAccountLinks(false) : toggleAccountLinks(true));
 
   return (
-    <>
-      <header className={styles.top_header_not_home}>
-        <div className={styles.header_home}>
-          <div className={styles.left_header}>
-            {/* Desktop */}
-            <div className={styles.side_bar_menu}>
-              {!isSidebar ? (
-                <div onClick={sidebarHandler} className={styles.hamburger}>
-                  <GiHamburgerMenu />
-                </div>
-              ) : (
-                <div onClick={sidebarHandler} className={styles.close_button}>
-                  <AiOutlineClose />
-                </div>
-              )}
+    <div className={styles.header_home}>
+      <div className={styles.left_header}>
+        {/* Desktop */}
+        <div className={styles.side_bar_menu}>
+          {!isSidebar ? (
+            <div onClick={sidebarHandler} className={styles.hamburger}>
+              <GiHamburgerMenu />
             </div>
-            {/* Desktop and Mobile */}
-            <div className={styles.search_box}>
-              <div className={styles.search_icon}>
-                <BiSearchAlt />
-              </div>
-              <input className={styles.search} type="search" />
+          ) : (
+            <div onClick={sidebarHandler} className={styles.close_button}>
+              <AiOutlineClose />
             </div>
-          </div>
-
-          <div className={styles.mid_header}>
-            {/* Desktop */}
-
-            {/* Mobile */}
-          </div>
-
-          <div className={styles.right_header}>
-            {/* Desktop and Mobile */}(
-            <div className={styles.header_photo_wrap}>
-              {photo ? (
-                <img
-                  src={context.authState.user.photo}
-                  onClick={menuHandler}
-                  className={styles.header_photo}
-                  alt="Not Found"
-                />
-              ) : (
-                <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
-              )}
-              {accountLinks && (
-                <div className={styles.account_dropdown}>
-                  <div className={styles.account_dropdown_item}>Account</div>
-                  <div className={styles.account_dropdown_item}>Settings</div>
-                  <div className={styles.account_dropdown_item}>Logout</div>
-                </div>
-              )}
-            </div>
-            )
-          </div>
+          )}
         </div>
-      </header>
-    </>
+        {/* Desktop and Mobile */}
+        <div className={styles.search_box}>
+          <div className={styles.search_icon}>
+            <BiSearchAlt />
+          </div>
+          <input className={styles.search} type="search" />
+        </div>
+      </div>
+
+      <div className={styles.mid_header}>
+        {/* Desktop */}
+
+        {/* Mobile */}
+      </div>
+
+      <div className={styles.right_header}>
+        {/* Desktop and Mobile */}(
+        <div className={styles.header_photo_wrap}>
+          {photo ? (
+            <img
+              src={context.authState.user.photo}
+              onClick={menuHandler}
+              className={styles.header_photo}
+              alt="Not Found"
+            />
+          ) : (
+            <MdAccountCircle className={styles.header_photo} onClick={menuHandler} />
+          )}
+          {accountLinks && (
+            <div className={styles.account_dropdown}>
+              <div className={styles.account_dropdown_item}>Account</div>
+              <div className={styles.account_dropdown_item}>Settings</div>
+              <div className={styles.account_dropdown_item}>Logout</div>
+            </div>
+          )}
+        </div>
+        )
+      </div>
+    </div>
   );
 };
 

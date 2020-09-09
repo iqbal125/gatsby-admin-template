@@ -58,23 +58,16 @@ const Routes = () => {
   };
 
   return (
-    <div className={isSidebar ? styles.main_with_sidebar : styles.main_small_sidebar}>
-      {isSidebar ? (
-        <div className={styles.side_bar}>
-          <SideBar AppLinks={AppLinks} />
-        </div>
-      ) : (
-        <div className={styles.side_bar_icons}>
-          <SideBarIcons AppLinks={AppLinks} />
-        </div>
-      )}
+    <div className={styles.main}>
+      {isSidebar ? <SideBar AppLinks={AppLinks} /> : <SideBarIcons AppLinks={AppLinks} />}
 
       <div className={styles.content}>
         <div className={styles.top_nav}>
           <TopHeader AppLinks={AppLinks} />
         </div>
-
-        <AppHeader props={{ isSidebar, sidebarHandler }} />
+        <div className={styles.app_header}>
+          <AppHeader props={{ isSidebar, sidebarHandler }} />
+        </div>
 
         <Router>
           {/*<PrivateRoute path="/app/profile" component={Profile} />*/}

@@ -1,13 +1,8 @@
 /* Main Layout */
 @media screen and (min-width: 769px) {
-  .main_with_sidebar {
+  .main {
     display: grid;
-    grid-template-columns: 12em auto;
-  }
-
-  .main_small_sidebar {
-    display: grid;
-    grid-template-columns: 4em auto;
+    grid-template-columns: auto auto;
   }
 
   .top_nav {
@@ -23,6 +18,10 @@
   .side_bar_icons {
     display: none;
   }
+
+  .app_header {
+    display: none;
+  }
 }
 
 /* Content */
@@ -30,14 +29,13 @@
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 /* Sidebar */
 .side_bar {
-  width: 12em;
+  width: auto;
 }
 
 .side_bar_icons {
-  width: 4em;
+  width: auto;
 }
