@@ -3,7 +3,7 @@ import AuthContext from '../../utils/auth_context';
 import axios from 'axios';
 import styles from './profile.module.css';
 
-const Todos = () => {
+const ListTodos = () => {
   const [todos, setTodos] = useState(null);
 
   const context = useContext(AuthContext);
@@ -110,4 +110,4 @@ const Todos = () => {
   );
 };
 
-export default Todos;
+export default ListTodos;

@@ -17,8 +17,8 @@ const AppLinks = [
   },
   {
     id: 3,
-    header: 'Show Links 3',
-    url: '/app/createtask3',
+    header: 'Edit Tasks',
+    url: '/app/edittask',
     icon: FiEdit
   }
 ];
