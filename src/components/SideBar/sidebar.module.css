@@ -5,8 +5,8 @@
   flex-direction: column;
   background-color: black;
   position: sticky;
+  top: 0;
   width: var(--side-bar-full-length);
-  height: 100%;
   min-height: 100vh;
   overflow-y: scroll;
   animation: grow 0.4s linear;

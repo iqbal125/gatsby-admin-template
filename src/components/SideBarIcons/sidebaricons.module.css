@@ -4,9 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 0;
   padding-top: 2rem;
   background-color: black;
-  position: sticky;
   min-height: 100vh;
   width: var(--side-bar-icon-length);
   animation: shrink 0.4s linear;

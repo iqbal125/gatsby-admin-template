@@ -48,6 +48,21 @@ const Profile = () => {
           </button>
         </form>
       </div>
+      <div className={styles.form_wrap}>
+        <form onSubmit={postTodo} className={styles.main_form}>
+          <div className={styles.form_row}>
+            <label>Title:</label>
+            <input onChange={handleTitleChange} value={formTitle} name="title" />
+          </div>
+          <div className={styles.form_row}>
+            <label>Description:</label>
+            <textarea onChange={handleDescChange} value={formDescription} name="description" />
+          </div>
+          <button className={styles.submit_button} type="submit">
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
