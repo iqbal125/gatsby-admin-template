@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
 import SocialBar from '../SocialBar';
-import 'html5-device-mockups/dist/device-mockups.css';
+
 import 'html5-device-mockups/dist/device-mockups.min.css';
-import { IPhone5 } from 'react-device-mockups';
+import { IPhone6 } from 'react-device-mockups';
 
 //illustrations
 import image1 from '../../../static/uploads/coding_.svg';
@@ -107,21 +107,8 @@ const Home = () => {
           </p>
         </div>
 
-        {/*<div className="device-wrapper">
-            <div
-              className="device"
-              data-device="iPhone6"
-              data-orientation="portrait"
-              data-color="black"
-            >
-              <div className="screen">
-                <img src={image6} alt="" />
-              </div>
-              <div className="button"></div>
-            </div>
-          </div>*/}
         <div className={styles.device}>
-          <IPhone5
+          <IPhone6
             height={800}
             orientation="portrait"
             color="black"
@@ -130,7 +117,7 @@ const Home = () => {
             }}
           >
             <img src={image6} alt="" />
-          </IPhone5>
+          </IPhone6>
         </div>
       </div>
       <div className={styles.bottom_cta_section}>
