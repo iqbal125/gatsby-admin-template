@@ -7,10 +7,20 @@
   background-color: var(--primary-color);
 }
 
+/* Device Mocks Row */
 .rowMocks {
   display: flex;
-  justify-content: center;
-  height: 500px;
+  background-color: lightgrey;
+  padding: 4rem;
+}
+
+.rowMocksText {
+  flex-basis: 0.3;
+  padding-right: 10rem;
+}
+
+.device {
+  filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.5));
 }
 
 .landing_hero > div {
