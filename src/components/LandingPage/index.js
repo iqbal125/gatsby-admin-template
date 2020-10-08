@@ -1,12 +1,14 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { navigate } from 'gatsby';
 import SocialBar from '../SocialBar';
+import 'html5-device-mockups/dist/device-mockups.css';
 
 //illustrations
 import image1 from '../../../static/uploads/coding_.svg';
 import image2 from '../../../static/uploads/wave.svg';
 import image3 from '../../../static/uploads/undraw_design_notes_8dmv.svg';
 import image5 from '../../../static/uploads/code_development_.svg';
+import image6 from '../../../static/uploads/Untitled Project.gif';
 
 import styles from './home.module.css';
 
@@ -62,7 +64,21 @@ const Home = () => {
       <div className={styles.wave_bottom_hero}>
         <img src={image2} alt="" />
       </div>
-
+      <div className={styles.rowMocks}>
+        <div className="device-wrapper">
+          <div
+            className="device"
+            data-device="iPhone6"
+            data-orientation="portrait"
+            data-color="white"
+          >
+            <div className="screen">
+              <img src={image6} alt="" width="100%" height="100%" />
+            </div>
+            <div className="button"></div>
+          </div>
+        </div>
+      </div>
       <div className={styles.feature1}>
         <div className={styles.feature1_text}>
           <h2>Feature #1</h2>

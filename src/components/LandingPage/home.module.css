@@ -7,6 +7,12 @@
   background-color: var(--primary-color);
 }
 
+.rowMocks {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+}
+
 .landing_hero > div {
   display: flex;
   justify-content: center;
